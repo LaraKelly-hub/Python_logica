@@ -1,4 +1,4 @@
-ici=[]
+dici=[]
 class Cadastro_produto():
    
 
