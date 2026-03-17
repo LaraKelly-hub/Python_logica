@@ -1,55 +1,47 @@
-
-# O código tem o intuito de realizar manipulação de lista e dicionario como uma forma de gerenciar os funcionários 
-# e seus dados.
-
-
-# clase para gerenciar registro de funcionários e seus dados pessoais
-class Dados_pessoais():
-    lista_funcionario=[]
-    dicionario={}
-
-    def __init__(self,nome:str,idade:int):
-          self._nome=nome
-          self._idade=idade
-      
-
-    def registro(self):
-        if  isinstance(self._nome,str):
-          self.__class__.lista_funcionario.append(self._nome)
-          return 'Funcionario registrado com sucesso.'
-        else:
-           return 'A variavél deve ser do tipo string.'
-
-    
-    def exibir(self):
-    #  Exibir lista de funcionários
-     if self.lista_funcionario:
-      return f'Funcionarios registrados: {(self.__class__.lista_funcionario)}'
-     
-     else:
-        return 'Lista sem registro.'
-
-    
-    def registro_completo(self):
-      #  Adiciona nome e idade ao dicionário
-       self.__class__.dicionario[self._nome]=self._idade
-       return self.__class__.dicionario
+ici=[]
+class Cadastro_produto():
    
 
+    def registra_Pdt():
+        
+        quantidade=int(input("Quantos produtos desejar registra? "))
+        
+        
+        for n in range(quantidade):
+            nome_produto=input('Nome do produto: ')
 
+            try:
+                preco=float(input('Preço do produto: '))
+                quantidade_estoque=int(input('Quantidade em estoque: '))
 
-if __name__=='__main__':
+            except ValueError:
+                print('Informe dígitos númericos!')
+                continue
 
- funcionario01=Dados_pessoais('Lara',20)
- funcionario01.registro()
- print(funcionario01.registro_completo())
- print(funcionario01.exibir())
+            produtos={
+            'Nome': nome_produto,
+            'Preço': preco,
+            'Estoque': quantidade_estoque
+            }
 
- funcionario2=Dados_pessoais('Maycon', 56)
- funcionario2.registro()
- print(funcionario2.registro_completo())
- print(funcionario2.exibir())
+            dici.append(produtos)
  
+        
+        total_estoque=0
+        print('\nProdutos cadastrados: ')
 
-
+        for produto in dici:
+         print(f'{produto["Nome"]}')
+         
+         total_estoque+=produto["Preço"] *produto["Estoque"]
+         produto_mais_caro=max(dici,key= lambda p: p['Preço'])
+         
+         
+        print(f"\nProduto mais caro:\n{produto_mais_caro['Nome']}")
+        print(f'\nValor total do estoque: {total_estoque:.1f}R$')
     
+      
+
+if _name_ == "_main_":
+    n1=Cadastro_produto
+    n1.registra_Pdt()
