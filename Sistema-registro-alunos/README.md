@@ -11,9 +11,13 @@ O sistema permite ao usuário inserir os dados dos alunos (nome e notas), realiz
 🎯 Funcionalidades
 
 ✔️ Cadastro de alunos
+
 ✔️ Validação de entrada de dados
+
 ✔️ Cálculo de média automaticamente
+
 ✔️ Listagem de alunos cadastrados
+
 ✔️ Separação entre alunos aprovados e reprovados
 
 ---
